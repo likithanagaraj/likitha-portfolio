@@ -20,35 +20,39 @@ export default function CompaniesCarousal() {
   const allLogos = [...logos, ...logos, ...logos];
 
   return (
-    <section className="py-20 md:py-24 max-w-2xl mx-auto">
+      <section className="py-20 md:py-24 max-w-2xl mx-auto">
       <div className="container">
         <div className="flex flex-col md:flex-row items-center gap-5">
           <div className="md:flex md:flex-none hidden">
             <h2 className="text-balance">Trusted by top innovative teams</h2>
           </div>
-          <div
-            className="flex-1 overflow-hidden"
-            style={{
-              maskImage:
-                "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
-              WebkitMaskImage:
-                "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
-            }}
-          >
+
+          {/* ✅ Key fix: overflow-hidden on the outer wrapper prevents horizontal bleed */}
+          <div className="flex-1 min-w-0 overflow-hidden w-full">
             <div
-              className="flex gap-12 w-max"
+              className="overflow-hidden w-full"
               style={{
-                animation: "marquee 18s linear infinite",
+                maskImage:
+                  "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
+                WebkitMaskImage:
+                  "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
               }}
             >
-              {allLogos.map((logo, index) => (
-                <Image
-                  key={index}
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-6 w-auto grayscale"
-                />
-              ))}
+              <div
+                className="flex gap-12 w-max"
+                style={{
+                  animation: "marquee 18s linear infinite",
+                }}
+              >
+                {allLogos.map((logo, index) => (
+                  <Image
+                    key={index}
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-6 w-auto grayscale"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -67,6 +71,8 @@ export default function CompaniesCarousal() {
     </section>
   );
 }
+
+
 
 
 
