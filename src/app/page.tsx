@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 };
 export default function Page() {
   return (
-    <main className="min-h-dvh flex flex-col gap-14 relative">
+    <main className="min-h-dvh flex flex-col gap-14 relative overflow-x-hidden">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
@@ -119,7 +119,14 @@ export default function Page() {
           </div>
         </div>
       </section> */}
-      <section id="skills">
+   
+      <section id="projects">
+        <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <ProjectsSection />
+        </BlurFade>
+      </section>
+
+         <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
@@ -135,11 +142,6 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </section>
-      <section id="projects">
-        <BlurFade delay={BLUR_FADE_DELAY * 11}>
-          <ProjectsSection />
-        </BlurFade>
       </section>
       {/* <section id="hackathons">
         <BlurFade delay={BLUR_FADE_DELAY * 13}>

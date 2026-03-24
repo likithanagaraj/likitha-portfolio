@@ -26,8 +26,6 @@ export default function CompaniesCarousal() {
           <div className="md:flex md:flex-none hidden">
             <h2 className="text-balance">Trusted by top innovative teams</h2>
           </div>
-
-          {/* ✅ Key fix: overflow-hidden on the outer wrapper prevents horizontal bleed */}
           <div className="flex-1 min-w-0 overflow-hidden w-full">
             <div
               className="overflow-hidden w-full"
