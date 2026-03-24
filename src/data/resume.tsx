@@ -24,23 +24,18 @@ export const DATA = {
   location: "Bangalore, India",
   locationLink: "https://www.google.com/maps/place/bangalore",
   description:
-    "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    "Product Designer & Builder based in Bangalore. I create user-focused apps that look good and work well.",
   summary:
-    "I’m a developer and designer based in Bangalore who loves building products.I work across web and app development, creating fast and user-focused experiences using modern technologies. From UI systems to AI-powered tools, I enjoy turning ideas into real products.Currently focused on product building, design, and growth.",
+    "I design and build user-focused apps that feel good to use, not just functional. I work across design and development, creating products end-to-end. I’ve worked with clients like SAT Group and Unlock PI, and I’m building Appykit, where I share my journey through real projects and resources. I also document my learnings on YouTube, focused on app design and development.",
   avatarUrl: "/me2.jpg",
   skills: [
-    { name: "React", icon: ReactLight },
-    { name: "Next.js", icon: NextjsIconDark },
-    { name: "Typescript", icon: Typescript },
-    { name: "Node.js", icon: Nodejs },
-    { name: "Python", icon: Python },
-    { name: "Dart", icon: Dart },
-    { name: "Flutter", icon: Flutter },
-    { name: "Figma", icon: Figma },
-    { name: "JavaScript", icon: JavaScript },
-    { name: "React Native", icon: ReactNative },
-    { name: "Postgres", icon: Postgresql },
-    { name: "Java", icon: Java },
+   { name: "Product Design", icon: Figma },
+  { name: "UX/UI Design", icon: Figma },
+  { name: "Figma", icon: Figma },
+  { name: "Prototyping", icon: Figma },
+  { name: "Flutter", icon: Flutter },
+  { name: "TypeScript", icon: Typescript },
+  
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -50,18 +45,10 @@ export const DATA = {
     email: "likithanagaraj2004@gmail.com",
     tel: "",
     social: {
-      GitHub: {
-        name: "GitHub",
-        url: "https://github.com/likithanagaraj",
-        icon: Icons.github,
-        navbar: true,
-      },
-
-      LinkedIn: {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/likithanagaraj/",
-        icon: Icons.linkedin,
-
+      Youtube: {
+        name: "Youtube",
+        url: "https://www.youtube.com/@likithabuilds",
+        icon: Icons.youtube,
         navbar: true,
       },
       X: {
@@ -71,10 +58,10 @@ export const DATA = {
 
         navbar: true,
       },
-      Youtube: {
-        name: "Youtube",
-        url: "https://www.youtube.com/@likithabuilds",
-        icon: Icons.youtube,
+      GitHub: {
+        name: "GitHub",
+        url: "https://github.com/likithanagaraj",
+        icon: Icons.github,
         navbar: true,
       },
       email: {
@@ -84,82 +71,57 @@ export const DATA = {
 
         navbar: false,
       },
+
+      // LinkedIn: {
+      //   name: "LinkedIn",
+      //   url: "https://www.linkedin.com/in/likithanagaraj/",
+      //   icon: Icons.linkedin,
+
+      //   navbar: true,
+      // },
+      
+      
+      
     },
   },
-
   work: [
-    {
-      company: "UnicornSpace",
-      href: "",
-      badges: [],
-      location: "Remote",
-      title: "App, Web Developer & Product Designer",
-      logoUrl: "/unicronSpace.png",
-      start: "May 2024",
-      end: "Present",
-      description:
-        "",
-    },
-    // {
-    //   company: "Shopify",
-    //   badges: [],
-    //   href: "https://shopify.com",
-    //   location: "Remote",
-    //   title: "Software Engineer",
-    //   logoUrl: "/shopify.svg",
-    //   start: "January 2021",
-    //   end: "April 2021",
-    //   description:
-    //     "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
-    // },
-    // {
-    //   company: "Nvidia",
-    //   href: "https://nvidia.com/",
-    //   badges: [],
-    //   location: "Santa Clara, CA",
-    //   title: "Software Engineer",
-    //   logoUrl: "/nvidia.png",
-    //   start: "January 2020",
-    //   end: "April 2020",
-    //   description:
-    //     "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
-    // },
-    // {
-    //   company: "Splunk",
-    //   href: "https://splunk.com",
-    //   badges: [],
-    //   location: "San Jose, CA",
-    //   title: "Software Engineer",
-    //   logoUrl: "/splunk.svg",
-    //   start: "January 2019",
-    //   end: "April 2019",
-    //   description:
-    //     "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
-    // },
-    // {
-    //   company: "Lime",
-    //   href: "https://li.me/",
-    //   badges: [],
-    //   location: "San Francisco, CA",
-    //   title: "Software Engineer",
-    //   logoUrl: "/lime.svg",
-    //   start: "January 2018",
-    //   end: "April 2018",
-    //   description:
-    //     "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    // },
-    // {
-    //   company: "Mitre Media",
-    //   href: "https://mitremedia.com/",
-    //   badges: [],
-    //   location: "Toronto, ON",
-    //   title: "Software Engineer",
-    //   logoUrl: "/mitremedia.png",
-    //   start: "May 2017",
-    //   end: "August 2017",
-    //   description:
-    //     "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
-    // },
+  {
+    company: "UnicornSpace",
+    href: "",
+    badges: [],
+    location: "Remote",
+    title: "App, Web Developer & Product Designer",
+    logoUrl: "/unicronSpace.png",
+    start: "May 2024",
+    end: "Present",
+    description: "",
+  },
+
+  {
+    company: "Unlock Pi",
+    href: "",
+    badges: [],
+    location: "Remote",
+    title: "Full Stack Developer",
+    logoUrl: "/unlockpi.png", // add this image in public folder
+    start: "Dec 2024",
+    end: "Sep 2025",
+    description:
+      "Built and developed features for Unlock Pi platform, focusing on scalable web/app solutions and user experience.",
+  },
+
+  {
+    company: "SAT Groups",
+    href: "",
+    badges: [],
+    location: "Remote",
+    title: "Web Developer",
+    logoUrl: "/satgroups.png", // add this image
+    start: "2025",
+    end: "2026",
+    description:
+      "Developed and maintained web solutions for SAT Groups, improving usability and performance.",
+  },
   ],
   education: [
     {
@@ -202,14 +164,13 @@ export const DATA = {
       dates: "Jan 2025 - Feb 2026-Present",
       active: true,
       description:
-        "Appykit is a platform where I share my journey of learning Flutter and Dart through blogs, resources, and real projects.It includes app galleries, APKs, and reusable UI blocks with code to help developers go from design to building faster.Built as a mix of learning hub and developer toolkit, Appykit aims to make app development more accessible and practical.",
+        "Appykit is a platform where I share my Flutter and Dart journey through blogs, resources, and real projects. It includes app galleries, APKs, and reusable UI blocks to help developers build faster.",
       technologies: [
         "Next.js",
         "Typescript",
         "PostgreSQL",
         "TailwindCSS",
         "Shadcn UI",
-        "Magic UI",
       ],
       links: [
         // {
@@ -243,7 +204,6 @@ export const DATA = {
         "Flutter",
         "TailwindCSS",
         "Shadcn UI",
-        "Magic UI",
       ],
       links: [
         // {
@@ -274,7 +234,6 @@ export const DATA = {
         "Prisma",
         "TailwindCSS",
         "Shadcn UI",
-        "Magic UI",
         "Stripe",
       ],
       links: [
@@ -321,6 +280,62 @@ export const DATA = {
       image: "",
       video:
         "/PaisaLogr.mp4",
+    },
+    {
+      title: "SAT Groups",
+      href: "",
+      dates: "2025 - 2026",
+      active: false,
+      description:
+        "An Android application for SAT Groups Compancy to manage their operations and provide a seamless experience for their users.",
+      technologies: [
+        "React Native",
+        "Expo",
+        "Supabase",
+      ],
+      links: [
+        // {
+        //   type: "App",
+        //   href: "https://www.appykit-ui.com/gallery/paisalogr",
+        //   icon: <Icons.globe className="size-3" />,
+        // },
+        // {
+        //   type: "Source",
+        //   href: "https://github.com/likithanagaraj/PaisaLogr",
+        //   icon: <Icons.github className="size-3" />,
+        // },
+      ],
+      image: "/satgroups.png",
+      video:
+        "",
+    },
+    {
+      title: "Unlock PI",
+      href: "",
+      dates: "Dec 2024 - Sep 2025",
+      active: false,
+      description:
+        "An Android application for freshers that are looking for jobs.",
+      technologies: [
+       "React Native",
+        "Expo",
+        "Supabase",
+      ],
+      links: [
+        // {
+        //   type: "App",
+        //   href: "https://www.appykit-ui.com/gallery/paisalogr",
+        //   icon: <Icons.globe className="size-3" />,
+        // },
+        // {
+        //   type: "Source",
+        //   href: "https://github.com/likithanagaraj/PaisaLogr",
+        //   icon: <Icons.github className="size-3" />,
+        // },
+      ],
+      image: "/unlockpi.png",
+      video:
+        "",
     },
   ],
   hackathons: [
@@ -709,3 +724,6 @@ export const DATA = {
     },
   ],
 } as const;
+
+
+

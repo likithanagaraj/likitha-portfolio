@@ -16,12 +16,14 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
   }
 
   return (
-    <img
-      src={src}
-      alt={alt}
-      className="w-full h-48 object-cover"
-      onError={() => setImageError(true)}
-    />
+      <div className="w-full h-48 flex items-center justify-center bg-muted/30">
+      <img
+        src={src}
+        alt={alt}
+        className="max-w-48 max-h-48 object-contain"
+        onError={() => setImageError(true)}
+      />
+    </div>
   );
 }
 

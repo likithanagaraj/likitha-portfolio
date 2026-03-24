@@ -10,9 +10,15 @@ import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import { ArrowUpRight } from "lucide-react";
+import CompaniesCarousal from "@/components/section/companies-carousal";
+import type { Metadata } from "next";
 
 const BLUR_FADE_DELAY = 0.04;
-
+export const metadata: Metadata = {
+  title: "Likitha N | Product Designer & Builder",
+  description:
+    "I design and build user-focused apps that feel good to use. Sharing my journey through Appykit.",
+};
 export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
@@ -145,6 +151,8 @@ export default function Page() {
           <ContactSection />
         </BlurFade>
       </section>
+      <CompaniesCarousal/>
+      
     </main>
   );
 }
