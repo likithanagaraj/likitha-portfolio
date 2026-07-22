@@ -16,7 +16,7 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
   }
 
   return (
-      <div className="w-full h-48 flex items-center justify-center bg-muted/30">
+    <div className="w-full h-48 flex items-center justify-center bg-muted/30">
       <img
         src={src}
         alt={alt}
@@ -60,7 +60,7 @@ export function ProjectCard({
     <div
       className={cn(
         "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200",
-        className
+        className,
       )}
     >
       <div className="relative shrink-0">
@@ -123,8 +123,8 @@ export function ProjectCard({
             <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
-        <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
-          <Markdown>{description}</Markdown>
+        <div className="text-xs flex-1 prose max-w-full  text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
+          <p className="line-clamp-2 ">{description}</p>
         </div>
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-auto">

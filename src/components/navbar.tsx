@@ -3,7 +3,6 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { Separator } from "@/components/ui/separator";
 import {
   Tooltip,
-  TooltipArrow,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
@@ -17,16 +16,18 @@ export default function Navbar() {
           const isExternal = item.href.startsWith("http");
           return (
             <Tooltip key={item.href}>
-              <TooltipTrigger asChild>
-                <a
-                  href={item.href}
-                  target={isExternal ? "_blank" : undefined}
-                  rel={isExternal ? "noopener noreferrer" : undefined}
-                >
-                  <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
-                    <item.icon className="size-full rounded-sm overflow-hidden object-contain" />
-                  </DockIcon>
-                </a>
+              <TooltipTrigger
+                render={
+                  <a
+                    href={item.href}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
+                  />
+                }
+              >
+                <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
+                  <item.icon className="size-full rounded-sm overflow-hidden object-contain" />
+                </DockIcon>
               </TooltipTrigger>
               <TooltipContent
                 side="top"
@@ -34,7 +35,6 @@ export default function Navbar() {
                 className="rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
               >
                 <p>{item.label}</p>
-                <TooltipArrow className="fill-primary" />
               </TooltipContent>
             </Tooltip>
           );
@@ -50,16 +50,18 @@ export default function Navbar() {
             const IconComponent = social.icon;
             return (
               <Tooltip key={`social-${name}-${index}`}>
-                <TooltipTrigger asChild>
-                  <a
-                    href={social.url}
-                    target={isExternal ? "_blank" : undefined}
-                    rel={isExternal ? "noopener noreferrer" : undefined}
-                  >
-                    <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
-                      <IconComponent className="size-full rounded-sm overflow-hidden object-contain" />
-                    </DockIcon>
-                  </a>
+                <TooltipTrigger
+                  render={
+                    <a
+                      href={social.url}
+                      target={isExternal ? "_blank" : undefined}
+                      rel={isExternal ? "noopener noreferrer" : undefined}
+                    />
+                  }
+                >
+                  <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
+                    <IconComponent className="size-full rounded-sm overflow-hidden object-contain" />
+                  </DockIcon>
                 </TooltipTrigger>
                 <TooltipContent
                   side="top"
@@ -67,7 +69,6 @@ export default function Navbar() {
                   className="rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
                 >
                   <p>{name}</p>
-                  <TooltipArrow className="fill-primary" />
                 </TooltipContent>
               </Tooltip>
             );
@@ -77,7 +78,7 @@ export default function Navbar() {
           className="h-2/3 m-auto w-px bg-border"
         />
         <Tooltip>
-          <TooltipTrigger asChild>
+          <TooltipTrigger render={<div className="flex items-center justify-center" />}>
             <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
               <ModeToggle className="size-full cursor-pointer" />
             </DockIcon>
@@ -88,7 +89,6 @@ export default function Navbar() {
             className="rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
           >
             <p>Theme</p>
-            <TooltipArrow className="fill-primary" />
           </TooltipContent>
         </Tooltip>
       </Dock>

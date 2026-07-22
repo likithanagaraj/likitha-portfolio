@@ -10,34 +10,14 @@ import {
 import { DATA } from "@/data/resume";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-function LogoImage({ src, alt }: { src: string; alt: string }) {
-  const [imageError, setImageError] = useState(false);
-
-  if (!src || imageError) {
-    return (
-      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
-    );
-  }
-
-  return (
-    <img
-      src={src}
-      alt={alt}
-      className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none "
-      onError={() => setImageError(true)}
-    />
-  );
-}
-
 export default function WorkSection() {
   return (
-    <Accordion type="single" collapsible className="w-full grid gap-6">
+    <Accordion className="w-full grid gap-6">
       {DATA.work.map((work) => (
         <AccordionItem
           key={work.company}
           value={work.company}
-          className="w-full border-b-0 grid gap-2"
+          className="w-full border-b-0 grid gap-2 ml-1 pr-2"
         >
           <AccordionTrigger className="hover:no-underline p-0 cursor-pointer transition-colors rounded-none group [&>svg]:hidden">
             <div className="flex items-center gap-x-3 justify-between w-full text-left">
@@ -52,14 +32,14 @@ export default function WorkSection() {
                           "absolute h-3.5 w-3.5 shrink-0 text-muted-foreground stroke-2 transition-all duration-300 ease-out",
                           "translate-x-0 opacity-0",
                           "group-hover:translate-x-1 group-hover:opacity-100",
-                          "group-data-[state=open]:opacity-0 group-data-[state=open]:translate-x-0"
+                          "group-data-[state=open]:opacity-0 group-data-[state=open]:translate-x-0",
                         )}
                       />
                       <ChevronDown
                         className={cn(
                           "absolute h-3.5 w-3.5 shrink-0 text-muted-foreground stroke-2 transition-all duration-200",
                           "opacity-0 rotate-0",
-                          "group-data-[state=open]:opacity-100 group-data-[state=open]:rotate-180"
+                          "group-data-[state=open]:opacity-100 group-data-[state=open]:rotate-180",
                         )}
                       />
                     </span>
@@ -84,4 +64,20 @@ export default function WorkSection() {
     </Accordion>
   );
 }
+function LogoImage({ src, alt }: { src: string; alt: string }) {
+  const [imageError, setImageError] = useState(false);
 
+  if (!src || imageError) {
+    return (
+      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
+    );
+  }
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={cn("size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none ", src === "/unicornSpace.png" ? "dark:invert" : "")}
+      onError={() => setImageError(true)}
+    />
+  );
+}

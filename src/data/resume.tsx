@@ -29,12 +29,14 @@ export const DATA = {
     "I design and build user-focused apps that feel good to use, not just functional. I work across design and development, creating products end-to-end. I’ve worked with clients like SAT Group and Unlock PI, and I’m building Appykit, where I share my journey through real projects and resources. I also document my learnings on YouTube, focused on app design and development.",
   avatarUrl: "/me2.jpg",
   skills: [
-   { name: "Product Design", icon: Figma },
-  { name: "UX/UI Design", icon: Figma },
-  { name: "Figma", icon: Figma },
-  { name: "Prototyping", icon: Figma },
-  { name: "Flutter", icon: Flutter },
-  { name: "TypeScript", icon: Typescript },
+   { name: "Product Design", icon: Icons.designer },
+  { name: "UX/UI Design", icon: Icons.responsiveDesignHand },
+  { name: "Figma", icon: Icons.figma },
+  { name: "Prototyping", icon: Icons.prototype },
+  { name: "Dart", icon: Icons.dart },
+  { name: "Flutter", icon: Icons.flutter },
+  { name: "React Native", icon: Icons.reactnative },
+  { name: "TypeScript", icon: Icons.typescript},
   
   ],
   navbar: [
@@ -90,8 +92,8 @@ export const DATA = {
     href: "",
     badges: [],
     location: "Remote",
-    title: "App, Web Developer & Product Designer",
-    logoUrl: "/unicronSpace.png",
+    title: "Application Developer & Product Designer",
+    logoUrl: "/unicornSpace.png",
     start: "May 2024",
     end: "Present",
     description: "",
@@ -102,7 +104,7 @@ export const DATA = {
     href: "",
     badges: [],
     location: "Remote",
-    title: "Full Stack Developer",
+    title: "React Native Developer",
     logoUrl: "/unlockpi.png", // add this image in public folder
     start: "Dec 2024",
     end: "Sep 2025",
@@ -115,7 +117,7 @@ export const DATA = {
     href: "",
     badges: [],
     location: "Remote",
-    title: "Web Developer",
+    title: "Product Designer and Development",
     logoUrl: "/satgroups.png", // add this image
     start: "2025",
     end: "2026",
@@ -168,7 +170,7 @@ export const DATA = {
       technologies: [
         "Next.js",
         "Typescript",
-        "PostgreSQL",
+        // "PostgreSQL",
         "TailwindCSS",
         "Shadcn UI",
       ],
@@ -198,12 +200,12 @@ export const DATA = {
       description:
         "Redef AI is a voice-first AI productivity system that helps you cut through overwhelm and stay focused.Speak your thoughts, organize your day, and execute faster all in one place.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
+        // "Next.js",
         "Flutter",
-        "TailwindCSS",
-        "Shadcn UI",
+        "Typescript",
+        "Supabase",
+        // "TailwindCSS",
+        // "Shadcn UI",
       ],
       links: [
         // {
@@ -234,7 +236,7 @@ export const DATA = {
         "Prisma",
         "TailwindCSS",
         "Shadcn UI",
-        "Stripe",
+        // "Stripe",
       ],
       links: [
         // {
