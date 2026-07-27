@@ -70,6 +70,7 @@ export default function ProjectsSection() {
                 description={project.description}
                 dates={project.dates}
                 tags={project.technologies}
+                caseStudy={project.caseStudy}
                 image={project.image}
                 video={project.video}
                 links={project.links}

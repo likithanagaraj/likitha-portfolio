@@ -33,6 +33,7 @@ interface Props {
   description: string;
   dates: string;
   tags: readonly string[];
+  caseStudy?: string;
   link?: string;
   image?: string;
   video?: string;
@@ -50,6 +51,7 @@ export function ProjectCard({
   description,
   dates,
   tags,
+  caseStudy,
   link,
   image,
   video,
@@ -124,19 +126,20 @@ export function ProjectCard({
           </Link>
         </div>
         <div className="text-xs flex-1 prose max-w-full  text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
-          <p className="line-clamp-2 ">{description}</p>
+         {
+          caseStudy ?  <p className="line-clamp-2 ">{description}</p> :  <p className="line-clamp-4 ">{description}</p>
+         }
         </div>
-        {tags && tags.length > 0 && (
-          <div className="flex flex-wrap gap-1 mt-auto">
-            {tags.map((tag) => (
-              <Badge
-                key={tag}
-                className="text-[11px] font-medium border border-border h-6 w-fit px-2"
-                variant="outline"
-              >
-                {tag}
-              </Badge>
-            ))}
+        {caseStudy && (
+          <div className="mt-2">
+            <Link
+              href={caseStudy}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-md border border-input bg-secondary px-3 py-1 w-full text-sm font-medium text-secondary-foreground transition-colors hover:bg-secondary/90"
+            >
+              View case study
+            </Link>
           </div>
         )}
       </div>

@@ -37,7 +37,9 @@ export const DATA = {
   { name: "Flutter", icon: Icons.flutter },
   { name: "React Native", icon: Icons.reactnative },
   { name: "TypeScript", icon: Icons.typescript},
-  
+  { name: "User Research", icon: Icons.userResearch },
+  { name: "Wireframing", icon: Icons.wireframing },
+
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -87,6 +89,17 @@ export const DATA = {
     },
   },
   work: [
+    {
+    company: "TinyTales",
+    href: "",
+    badges: [],
+    location: "Remote",
+    title: "Brand & Creative Designer",
+    logoUrl: "/tinytales.png",
+    start: "May 2026",
+    end: "Present",
+    description: "Led visual branding through social media designs, logo updates, and creative assets. Worked closely on content planning and business decisions to improve brand presence.",
+  },
   {
     company: "UnicornSpace",
     href: "",
@@ -95,10 +108,10 @@ export const DATA = {
     title: "Application Developer & Product Designer",
     logoUrl: "/unicornSpace.png",
     start: "May 2024",
-    end: "Present",
-    description: "",
+    end: "May 2026",
+    description: "Designed user-centric mobile experiences from research and wireframes to high-fidelity prototypes while collaborating on product decisions. Developed Android features, bridging design and engineering to deliver seamless user experiences.",
   },
-
+  
   {
     company: "Unlock Pi",
     href: "",
@@ -125,6 +138,7 @@ export const DATA = {
       "Developed and maintained web solutions for SAT Groups, improving usability and performance.",
   },
   ],
+   
   education: [
     {
       school: "Buildspace",
@@ -174,6 +188,7 @@ export const DATA = {
         "TailwindCSS",
         "Shadcn UI",
       ],
+      caseStudy: undefined,
       links: [
         // {
         //   type: "Website",
@@ -207,6 +222,7 @@ export const DATA = {
         // "TailwindCSS",
         // "Shadcn UI",
       ],
+      caseStudy: undefined,
       links: [
         // {
         //   type: "App",
@@ -238,6 +254,7 @@ export const DATA = {
         "Shadcn UI",
         // "Stripe",
       ],
+      caseStudy: undefined,
       links: [
         // {
         //   type: "Website",
@@ -267,6 +284,7 @@ export const DATA = {
         "Prisma",
         "Provider", 
       ],
+      caseStudy: undefined,
       links: [
         // {
         //   type: "App",
@@ -285,7 +303,7 @@ export const DATA = {
     },
     {
       title: "SAT Groups",
-      href: "",
+      href: "https://play.google.com/store/apps/details?id=com.satgroups.app",
       dates: "2025 - 2026",
       active: false,
       description:
@@ -295,6 +313,7 @@ export const DATA = {
         "Expo",
         "Supabase",
       ],
+      caseStudy: undefined,
       links: [
         // {
         //   type: "App",
@@ -323,6 +342,7 @@ export const DATA = {
         "Expo",
         "Supabase",
       ],
+      caseStudy: undefined,
       links: [
         // {
         //   type: "App",

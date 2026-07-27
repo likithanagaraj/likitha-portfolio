@@ -70,6 +70,28 @@ export const Icons = {
       </g>
     </svg>
   ),
+  wireframing: (props: IconProps) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="4" width="18" height="16" rx="2"/>
+    <rect x="6" y="7" width="5" height="10" rx="1"/>
+    <path d="M13 8h5"/>
+    <path d="M13 11h5"/>
+    <path d="M13 14h3"/>
+  </g>
+</svg>
+  ),
+  userResearch: (props: IconProps) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="11" cy="11" r="6"/>
+    <path d="m20 20-3.5-3.5"/>
+    <path d="M8.5 11h5"/>
+    <path d="M11 8.5v5"/>
+  </g>
+</svg>
+  ),
+
   figma: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
