@@ -135,6 +135,40 @@ export default function ProjectsSection() {
             </div>
           </Link>
         </div>
+        <div className="mt-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-3xl border border-border bg-card p-5 sm:p-6">
+            <Link
+              href="https://www.appykit-ui.com/casestudy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 no-underline text-inherit flex-1 min-w-0"
+            >
+              <Avatar className="size-11 rounded-md! ">
+                <AvatarImage
+                  className={"rounded-md!"}
+                  src="/caseStudy.png"
+                  alt="Case study"
+                />
+                <AvatarFallback>CS</AvatarFallback>
+              </Avatar>
+              <div className="min-w-0">
+                <p className="text-xxl font-semibold">Checkout my case study</p>
+                <p className="text-xs text-muted-foreground line-clamp-2">
+                  Read the blog for detailed case studies, interface patterns, and product design insights.
+                </p>
+              </div>
+            </Link>
+            <Link
+              href="https://www.appykit-ui.com/casestudy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center  justify-center rounded-lg border border-input bg-primary px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-primary/90 whitespace-nowrap flex-shrink-0"
+            >
+              Read Case Study
+            </Link>
+
+          </div>
+        </div>
       </div>
     </section>
   );
